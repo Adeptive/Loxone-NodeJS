@@ -39,3 +39,27 @@ loxone.get("AI_SEN2-T", function(output){
 ```
 
 The following functions are available: `get(device, callback)`, `getValue(device, callback)` and `set(device, action, callback)`. 
+
+## Extending
+### Extending 'my-loxone.js'
+Add the following code to the my-loxone.js file to expose named functions to read an output.
+```javascript
+...
+loxone.getOutsideTemperature = function(callback) {
+    this.getValue("AI_SEN2-T", callback);
+};
+...
+```
+
+`AI_SEN2-T` is the name of an output.
+
+### In another nodejs file
+```javascript
+var loxone = require('./my-loxone');
+
+loxone.getOutsideTemperature(function(value) {
+    console.log("The outside temperature is: " + value + "°C");
+});
+```
+
+
