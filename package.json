@@ -1,7 +1,7 @@
 {
-  "name": "Loxone-nodejs",
+  "name": "loxone-nodejs",
   "version": "0.0.0",
-  "private": true,
+  "main": "lib/loxone-api.js",
   "scripts": {
     "start": "node ./bin/www"
   },
