@@ -38,4 +38,4 @@ loxone.get("AI_SEN2-T", function(output){
 });
 ```
 
-The following functions are available: `get(device, callback)` and `set(device, action, callback)`. 
+The following functions are available: `get(device, callback)`, `getValue(device, callback)` and `set(device, action, callback)`. 
