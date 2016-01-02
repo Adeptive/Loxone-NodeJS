@@ -62,4 +62,20 @@ loxone.getOutsideTemperature(function(value) {
 });
 ```
 
+## Examples
+### Simple Example
+This example contains a very example that connects to the Loxone to get the value of a certain output.
 
+```bash
+cd example-simple
+npm start
+```
+
+### Homekit Example
+This example is using another node JS project build on top of Homekit Accessory Protocol (HAP):
+https://github.com/KhaosT/HAP-NodeJS
+
+```bash
+cd example-simple
+npm start
+```
