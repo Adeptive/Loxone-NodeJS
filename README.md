@@ -69,6 +69,7 @@ Configure the my-loxone.js file to point to your Loxone.
 
 ```bash
 cd example-simple
+npm install
 npm start
 ```
 
@@ -81,6 +82,7 @@ Also rename the virtual output name in loxone_temperatures.js.
 
 ```bash
 cd example-hap
+npm install
 npm start
 ```
 
