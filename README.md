@@ -65,6 +65,7 @@ loxone.getOutsideTemperature(function(value) {
 ## Examples
 ### Simple Example
 This example contains a very example that connects to the Loxone to get the value of a certain output.
+Configure the my-loxone.js file to point to your Loxone.
 
 ```bash
 cd example-simple
@@ -75,7 +76,12 @@ npm start
 This example is using another node JS project build on top of Homekit Accessory Protocol (HAP):
 https://github.com/KhaosT/HAP-NodeJS
 
+Configure the my-loxone.js file to point to your Loxone.
+Also rename the virtual output name in loxone_temperatures.js.
+
 ```bash
 cd example-hap
 npm start
 ```
+
+Install a free Homekit app from the App Store to find the homekit accessory.
