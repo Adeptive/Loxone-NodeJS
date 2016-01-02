@@ -30,5 +30,8 @@ sensor
     .addService(Service.TemperatureSensor)
     .getCharacteristic(Characteristic.CurrentTemperature)
     .on('get', function(callback) {
-        loxone.getTemperature(callback);
+        loxone.getTemperature(function(value) {
+            console.log("VALUE: " + value);
+            callback(null, value * 1);
+        });
     });
