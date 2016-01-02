@@ -1,6 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var loxone = require('../my-loxone');
+
+var LoxoneAPI = require('../lib/loxone-api');
+
+var loxone = new LoxoneAPI({
+  ip: "10.0.1.100",
+  debug: true,
+  username: "admin",
+  password: "admin"
+});
 
 router.get('/:device', function(req, res, next) {
 

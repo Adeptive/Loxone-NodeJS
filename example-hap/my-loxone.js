@@ -1,7 +1,7 @@
-var LoxoneAPI = require('./lib/loxone-api');
+var LoxoneAPI = require('loxone-nodejs');
 
 var loxone = new LoxoneAPI({
-    ip: "0.0.0.0",
+    ip: "10.0.1.100",
     debug: true,
     username: "admin",
     password: "admin"

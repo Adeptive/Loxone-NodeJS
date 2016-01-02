@@ -1,0 +1,10 @@
+{
+  "name": "loxone-nodejs-example-simple",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node ./loxone-api-test.js"
+  },
+  "dependencies": {
+    "loxone-nodejs": "git+https://github.com/CONNCTED/Loxone-NodeJS.git"
+  }
+}

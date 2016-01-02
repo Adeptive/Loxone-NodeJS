@@ -1,4 +1,4 @@
-var loxone = require('../my-loxone');
+var loxone = require('./my-loxone');
 
 loxone.get("AI_SEN2-T", function(output){
     if (output.LL.Code == 200) {

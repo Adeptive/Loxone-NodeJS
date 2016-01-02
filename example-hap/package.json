@@ -1,0 +1,12 @@
+{
+  "name": "loxone-nodejs-example-hap",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node ./HAP-Loxone-Core.js"
+  },
+  "dependencies": {
+    "loxone-nodejs": "git+https://github.com/CONNCTED/Loxone-NodeJS.git",
+    "hap-nodejs": "git+https://github.com/KhaosT/HAP-NodeJS.git",
+    "node-persist": "^0.0.6"
+  }
+}
