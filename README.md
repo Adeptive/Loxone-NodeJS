@@ -76,6 +76,6 @@ This example is using another node JS project build on top of Homekit Accessory 
 https://github.com/KhaosT/HAP-NodeJS
 
 ```bash
-cd example-simple
+cd example-hap
 npm start
 ```
