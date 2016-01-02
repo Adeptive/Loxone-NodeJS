@@ -9,3 +9,18 @@ loxone.get("AI_SEN2-T", function(output){
     }
 });
 
+var myCallback = function(output) {
+    console.log(output);
+};
+
+//loxone.getCPU(myCallback);
+
+//loxone.getEnumDev(myCallback);
+
+//loxone.getEnumIn(myCallback);
+
+//loxone.getEnumOut(myCallback);
+
+//loxone.getState(myCallback);
+
+//loxone.getChanges(myCallback);
