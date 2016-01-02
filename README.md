@@ -1,5 +1,6 @@
 # Loxone-NodeJS
-Loxone nodejs project to read &amp; control inputs and outputs
+Loxone nodejs project to read &amp; control inputs and outputs.
+Based on http://www.loxone.com/enen/service/documentation/api/webservices.html
 
 ## Installation
 ```bash
