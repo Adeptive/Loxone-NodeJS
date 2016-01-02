@@ -1,17 +1,8 @@
 {
   "name": "loxone-nodejs",
   "version": "0.0.1",
-  "main": "lib/loxone-api.js",
-  "scripts": {
-    "start": "node ./bin/www"
-  },
+  "main": "./loxone-api.js",
   "dependencies": {
-    "body-parser": "~1.13.2",
-    "cookie-parser": "~1.3.5",
-    "debug": "~2.2.0",
-    "express": "~4.13.1",
-    "jade": "~1.11.0",
-    "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0"
+    "http": "0.0.0"
   }
 }
