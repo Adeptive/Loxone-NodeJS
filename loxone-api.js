@@ -53,6 +53,11 @@ function LoxoneAPI(settings) {
         _get(url, callback);
     };
 
+    this.getAll = function (device, callback) {
+        var url = "/jdev/sps/io/" + device + "/all";
+        _get(url, callback);
+    };
+
     this.set = function (device, action, callback) {
         var url = "/jdev/sps/io/" + device + "/" + action;
         _get(url, callback);
