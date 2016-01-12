@@ -78,12 +78,28 @@ function LoxoneAPI(settings) {
                 output = JSON.parse(output);
                 if (debug) {console.log(output);}
 
+                if (output == undefined) {
+                    output = {
+                        LL: {
+                            Code: 500,
+                            value: 0,
+                            message: 'Unable to get response from Loxone Miniserver'
+                        }
+                    }
+                }
+
                 // return our current value
                 callback(output);
             });
         }).on('error', function(e) {
             console.log("Got error: " + e.message);
-            callback();
+            callback({
+                LL: {
+                    Code: 500,
+                    value: 0,
+                    message: e.message
+                }
+            });
         });
     };
 }
