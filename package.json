@@ -2,6 +2,19 @@
   "name": "loxone-nodejs",
   "version": "0.0.3",
   "main": "./loxone-api.js",
+  "author": "CONNCTED",
+
+  "license": "ISC",
+  "keywords": [
+    "loxone"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CONNCTED/Loxone-NodeJS.git"
+  },
+  "bugs": {
+    "url": "http://github.com/CONNCTED/Loxone-NodeJS/issues"
+  },
   "dependencies": {
     "http": "0.0.0"
   }

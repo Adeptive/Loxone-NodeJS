@@ -4,7 +4,7 @@ Based on http://www.loxone.com/enen/service/documentation/api/webservices.html
 
 ## Installation
 ```bash
-npm install https://github.com/CONNCTED/Loxone-NodeJS --save
+npm install loxone-nodejs --save
 ```
 
 ## Usage

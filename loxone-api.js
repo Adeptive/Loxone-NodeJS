@@ -43,7 +43,7 @@ function LoxoneAPI(settings) {
             if (output.LL.Code == '200') {
                 callback(output.LL.value);
             } else {
-                callback();
+                callback(undefined);
             }
         });
     };
@@ -82,7 +82,7 @@ function LoxoneAPI(settings) {
                     output = {
                         LL: {
                             Code: 500,
-                            value: 0,
+                            value: undefined,
                             message: 'Unable to get response from Loxone Miniserver'
                         }
                     }
@@ -96,7 +96,7 @@ function LoxoneAPI(settings) {
             callback({
                 LL: {
                     Code: 500,
-                    value: 0,
+                    value: undefined,
                     message: e.message
                 }
             });
