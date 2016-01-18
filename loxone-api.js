@@ -34,8 +34,12 @@ function LoxoneAPI(settings) {
         _get("/jdev/sps/changes", callback);
     };
 
-    this.getCPU= function(callback) {
+    this.getCPU = function(callback) {
         _get("/jdev/sys/cpu", callback);
+    };
+
+    this.getLoxApp = function(callback) {
+        _getXml("/data/LoxAPP2.xml", callback);
     };
 
     this.getValue = function (device, callback) {
@@ -100,6 +104,27 @@ function LoxoneAPI(settings) {
                     message: e.message
                 }
             });
+        });
+    };
+
+    var _getXml = function(url, callback) {
+        url = getBaseUrl() + url;
+
+        http.get(url, function(response) {
+            var output = "";
+            response.on('data', function (chunk) {
+                output += chunk;
+            });
+
+            response.on('end', function() {
+                if (debug) {console.log(output);}
+
+                // return our current value
+                callback(output);
+            });
+        }).on('error', function(e) {
+            console.log("Got error: " + e.message);
+            callback();
         });
     };
 }
