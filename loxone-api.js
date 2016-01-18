@@ -127,6 +127,9 @@ function LoxoneAPI(settings) {
             callback();
         });
     };
+
+    this._getXml = _getXml;
+    this._get = _get;
 }
 
 module.exports = LoxoneAPI;
