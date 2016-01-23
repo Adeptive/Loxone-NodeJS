@@ -39,7 +39,7 @@ function LoxoneAPI(settings) {
     };
 
     this.getLoxApp = function(callback) {
-        _getXml("/data/LoxAPP2.xml", callback);
+        _getXml("/data/LoxAPP2.xml", callback); //TODO JSON output
     };
 
     this.getValue = function (device, callback) {
