@@ -32,3 +32,5 @@ node_modules
 .idea
 
 /example-hap/persist
+
+test.js

@@ -148,7 +148,7 @@ function LoxoneAPI(settings) {
             });
 
             response.on('end', function() {
-                output = parser.toJSON(output, options);
+                output = parser.toJson(output, options);
                 output = JSON.parse(output);
 
                 if (debug) {console.log(output);}
