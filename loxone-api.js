@@ -1,4 +1,5 @@
 var http = require('http');
+var parser = require('xml2json');
 
 function LoxoneAPI(settings) {
 
@@ -39,7 +40,7 @@ function LoxoneAPI(settings) {
     };
 
     this.getLoxApp = function(callback) {
-        _getXml("/data/LoxAPP2.xml", callback); //TODO JSON output
+        _getXmlToJson("/data/LoxAPP2.xml", callback);
     };
 
     this.getValue = function (device, callback) {
@@ -128,8 +129,42 @@ function LoxoneAPI(settings) {
         });
     };
 
+    var _getXmlToJson = function(url, callback) {
+        url = getBaseUrl() + url;
+
+        var options = {
+            object: false,
+            reversible: false,
+            coerce: false,
+            sanitize: true,
+            trim: true,
+            arrayNotation: false
+        };
+
+        http.get(url, function(response) {
+            var output = "";
+            response.on('data', function (chunk) {
+                output += chunk;
+            });
+
+            response.on('end', function() {
+                output = parser.toJSON(output, options);
+                output = JSON.parse(output);
+
+                if (debug) {console.log(output);}
+
+                // return our current value
+                callback(output);
+            });
+        }).on('error', function(e) {
+            console.log("Got error: " + e.message);
+            callback();
+        });
+    };
+
     this._getXml = _getXml;
     this._get = _get;
+    this._getXmlToJson = _getXmlToJson;
 }
 
 module.exports = LoxoneAPI;

@@ -1,9 +1,8 @@
 {
   "name": "loxone-nodejs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "./loxone-api.js",
   "author": "CONNCTED",
-
   "license": "ISC",
   "keywords": [
     "loxone"
@@ -16,6 +15,7 @@
     "url": "http://github.com/CONNCTED/Loxone-NodeJS/issues"
   },
   "dependencies": {
-    "http": "0.0.0"
+    "http": "0.0.0",
+    "xml2json": "^0.9.0"
   }
 }
