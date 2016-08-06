@@ -43,6 +43,10 @@ function LoxoneAPI(settings) {
         _getXmlToJson("/data/LoxAPP2.xml", callback);
     };
 
+    this.getLoxApp3 = function(callback) {
+        _get("/jdev/sps/LoxAPPversion3", callback);
+    };
+
     this.getValue = function (device, callback) {
         this.get(device, function(output) {
             if (output.LL.Code == '200') {
@@ -148,6 +152,8 @@ function LoxoneAPI(settings) {
             });
 
             response.on('end', function() {
+                if (debug) {console.log(output);}
+
                 output = parser.toJson(output, options);
                 output = JSON.parse(output);
 

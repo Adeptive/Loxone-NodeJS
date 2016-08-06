@@ -1,6 +1,6 @@
 {
   "name": "loxone-nodejs",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "./loxone-api.js",
   "author": "CONNCTED",
   "license": "ISC",
