@@ -44,7 +44,7 @@ function LoxoneAPI(settings) {
     };
 
     this.getLoxApp3 = function(callback) {
-        _get("/jdev/sps/LoxAPPversion3", callback);
+        _get("/data/LoxAPP3.json", callback);
     };
 
     this.getValue = function (device, callback) {
